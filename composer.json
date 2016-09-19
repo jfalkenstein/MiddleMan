@@ -1,0 +1,13 @@
+{
+    "name": "PB/middle-man",
+    "description": "Description of project middleMan.",
+    "authors": [
+        {
+            "name": "jfalkenstein",
+            "email": "jfalkenstein@nazarene.org"
+        }
+    ],
+    "require": {
+        "php-di/php-di" : "5.3.0"
+    }
+}

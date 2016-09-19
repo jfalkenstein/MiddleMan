@@ -1,0 +1,18 @@
+#Allow cross-origin requests
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type, Content-Range, Content-Disposition, Content-Description"
+#Enable rewriting of the url
+RewriteEngine on
+#If the directory "d" or file "F" requested do not exist, rewrite the url
+#%{REQUEST_FILENAME} : The full local filesystem path to the file or script matching the request.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-F
+#Rewrite the url to index.php and append the chopped off url segments
+#in a query string for the keyword of "path" (QSA signifies "Query String Append").
+RewriteRule ^(.*)$ index.php?path=$1 [L,QSA]
+#If this is set to 'development', error reporting will be turned on. Otherwise,
+#they are off by default.
+SetEnv APPLICATION_ENV 'development'
+#Only allow access within GMC
+Require ip 10
