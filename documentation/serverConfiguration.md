@@ -8,10 +8,9 @@ It is currently running on linux (ubuntu), but can just as easily run on a windo
 host.
 
 Here are some relevant Apache directives for the current configuration:
-@codetly using. It is not necessary, as
-#MiddleMan could listen on any port. However,
-#This is the port number MiddleMan is curren whatever port being used, Apache
-#needs to be configured accordingly.
+@code
+#This is the port number MiddleMan is currently using. It is not necessary, as
+#MiddleMan could listen on any port.
 Listen 8081
 
 <VirtualHost *:8081>

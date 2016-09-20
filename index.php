@@ -20,7 +20,7 @@ const DS = DIRECTORY_SEPARATOR; /**< Alias the DIRECTORY_SEPARATOR to make it sh
  * Sometimes "/" is required and sometimes "\" is required depending upon the environment. */
 
 /* It is important to note that the autoloader is used for the purposes of loading the proper code dependencies.
- * Dependencies are manage using composer and a custom script.
+ * Dependencies are managed using composer and a custom script.
  * You can spend a lot of time exploring this, but it does not contain the primary code for performing the service provided.
  * To learn more about composer, go to https://getcomposer.org.
  */

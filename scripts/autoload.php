@@ -16,7 +16,7 @@ function registerAutoloader(){
         $className = substr($className, $lastNsPos + 1);
         $fileName = ROOT_DIR . 
                 DS . 
-                /*Replaces and '/' or '\' with the appropriate slash for environment.
+                /*Replaces a '/' or '\' with the appropriate slash for environment.
                  * This is a key part of why this function is required
                  */ 
                 str_replace('\\', DS, $namespace) . 
